@@ -84,16 +84,19 @@ def verifycpf():
         print('CPF inválido.')
 
 
-title()
+def verify():
+    verify2 = input("O que deseja fazer?\n[GERAR]\n[VALIDAR]\n- ").lower()
 
-while True:
-    verify = input("O que deseja fazer?\n[GERAR]\n[VALIDAR]\n- ").lower()
-
-    if verify == 'gerar':
+    if verify2 == 'gerar':
         generatecpf()
         sys.exit()
-    elif verify == 'validar':
+    elif verify2 == 'validar':
         verifycpf()
         sys.exit()
     else:
-        continue
+        verify()
+
+    return verify2
+title()
+verify()
+
