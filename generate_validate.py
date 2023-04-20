@@ -100,5 +100,4 @@ def verify():
 
 
 title()
-verify()
-
+verify() 
